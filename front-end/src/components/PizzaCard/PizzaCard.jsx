@@ -15,7 +15,7 @@ function PizzaCard({ imgSrc, pizzaName, ingredients, price, clickMenu }) {
     }
 
     function handleSubmit(e) {
-        e.preventDefault();
+         e.preventDefault();
         clickMenu();
         const cartItem = {
             amount: amount,
