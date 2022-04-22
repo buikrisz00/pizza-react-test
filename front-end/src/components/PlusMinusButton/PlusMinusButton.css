@@ -1,0 +1,12 @@
+.plusMinusBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F90;
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}

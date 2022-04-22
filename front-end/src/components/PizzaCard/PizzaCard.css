@@ -1,0 +1,59 @@
+.pizzaCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 400px;
+    width: 300px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(202, 202, 202, 0.5);
+    box-shadow: 0px 2px 10px -3px rgb(0 0 0 / 30%);
+}
+
+.pizzaCard img {
+    height: 150px;
+    width: 150px;
+}
+
+.pizzaCard h4 {
+    width: 250px;
+    text-align: center;
+    color: #CACACA;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.pizzaCard .amountSelector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 250px;
+}
+
+.pizzaCard .amountSelector input {
+    text-align: center;
+    border: 1px solid rgb(158, 158, 158);
+    height: 30px;
+    width: 30px;
+    -moz-appearance: textfield;
+}
+
+.pizzaCard .amountSelector input::-webkit-outer-spin-button,
+.pizzaCard .amountSelector input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.pizzaCard .bottomDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+}
+
+.pizzaCard .bottomDiv h3 {
+    text-align: center;
+}
+
