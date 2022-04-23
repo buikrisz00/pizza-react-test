@@ -1,0 +1,25 @@
+.loginPopup {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(255, 232, 203);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 300px;
+    width: 450px;
+}
+
+.loginPopup div {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    width: 400px;
+}
+
+.loginPopup div input {
+    background-color: #fff;
+}
+
