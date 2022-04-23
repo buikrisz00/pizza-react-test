@@ -14,6 +14,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use("src", express.static(srcFolder))
 
+app.get("/cart", (req, res) => {
+  res.sendFile(`${srcDataFolder}/cart.json`)
+})
+
 app.post('/add_to_cart', (req, res) => {
   fs.readFile(`${srcDataFolder}/cart.json`, (error, data) => {
     if (error) {
@@ -46,7 +50,7 @@ app.post('/add_to_cart', (req, res) => {
             console.log(err);
           }
         });
-        res.send("Success");
+        res.send(cartItems);
     }
 })
 });

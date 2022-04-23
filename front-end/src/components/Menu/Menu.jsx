@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react'
 import ActionButton from '../ActionButton/ActionButton'
 import MenuListItem from '../MenuListItem/MenuListItem'
 import './Menu.css'
-import cart from '../../data/cart.json'
+/* import cart from '../../data/cart.json' */
 
-function Menu({menuClicked}) {
+function Menu({menuClicked, cart}) {
     function priceFun(price) {
         return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     }

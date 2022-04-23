@@ -3,7 +3,7 @@ import ActionButton from '../ActionButton/ActionButton'
 import PlusMinusButton from '../PlusMinusButton/PlusMinusButton'
 import './PizzaCard.css'
 
-function PizzaCard({ imgSrc, pizzaName, ingredients, price, clickMenu }) {
+function PizzaCard({ imgSrc, pizzaName, ingredients, price, clickMenu, setCart }) {
     function priceFun(price) {
         return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     }
@@ -13,9 +13,9 @@ function PizzaCard({ imgSrc, pizzaName, ingredients, price, clickMenu }) {
     function changeAmount(e) {
         (e.target.classList.contains("minus")) ? (amount > 0) && setAmount(amount - 1) : setAmount(amount + 1)
     }
-
+    
     function handleSubmit(e) {
-         e.preventDefault();
+        e.preventDefault();
         clickMenu();
         const cartItem = {
             amount: amount,
@@ -29,6 +29,10 @@ function PizzaCard({ imgSrc, pizzaName, ingredients, price, clickMenu }) {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(cartItem)
+        })
+        .then(res => res.json())
+        .then(cartNewData => {
+            setCart(cartNewData)
         })
     }
 
